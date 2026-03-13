@@ -14,7 +14,7 @@ export async function sendChatMessage(
   history: Message[],
 ): Promise<string> {
   try {
-    const res = await fetch(`${process.env.API_URL_DEVELOPMENT}/api/chat`, {
+    const res = await fetch(`${process.env.API_URL_PRODUCTION}/api/chat`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message, history }),
